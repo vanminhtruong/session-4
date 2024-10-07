@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box-container{
+            max-width: 1200px;
+            min-height: 100vh;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #696969;
+        }
+
+        .box-container .content {
+            display: flex;
+            gap: 20px;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            animation: moveUpDown 2s infinite ease-in-out;
+            border-radius: 50%;
+        }
+
+        /* Animation for moving the box up and down */
+        @keyframes moveUpDown {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-50px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Delay for the second box */
+        .box:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        /* Delay for the third box */
+        .box:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        /* Delay for the fourth box */
+        .box:nth-child(4) {
+            animation-delay: 0.9s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box-container">
+        <div class="content">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+</body>
+</html>
